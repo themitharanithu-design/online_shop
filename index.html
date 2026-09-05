@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranithu Themitha | Tech Store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav>
+        <div class="logo">Ranithu Themitha</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Video Hero Section -->
+    <header id="home" class="hero">
+        <video class="bg-video" autoplay loop muted playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-components-in-close-up-41549-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>RANITHU THEMITHA TECH STORE</h1>
+            <p>Next-Gen Audio & Smart Accessories Store</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search Products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Products Section -->
+        <section id="products">
+            <h2 class="section-title">Our Featured Items</h2>
+
+            <div class="product-grid" id="productGrid">
+                
+                <!-- Earbuds -->
+                <div class="product-card" data-name="earbuds wireless sound">
+                    <div class="product-img"><i class="fas fa-headphones-alt"></i></div>
+                    <h3>Pro Wireless Earbuds</h3>
+                    <span class="call-price"><i class="fas fa-phone-alt"></i> Call Me for Price</span>
+                    <button class="btn-cart" onclick="openDetails('Pro Wireless Earbuds', '<b>Features:</b><br>• High-Quality Bass<br>• 20H Battery Life<br>• Noise Cancellation<br>• Bluetooth 5.3')">
+                        View Details / Add to 🛒
+                    </button>
+                </div>
+
+                <!-- Headset -->
+                <div class="product-card" data-name="headset gaming bass">
+                    <div class="product-img"><i class="fas fa-headset"></i></div>
+                    <h3>RGB Gaming Headset</h3>
+                    <span class="call-price"><i class="fas fa-phone-alt"></i> Call Me for Price</span>
+                    <button class="btn-cart" onclick="openDetails('RGB Gaming Headset', '<b>Features:</b><br>• Surround Sound<br>• Ultra Comfort Earcups<br>• HD Mic Included<br>• RGB Lights')">
+                        View Details / Add to 🛒
+                    </button>
+                </div>
+
+                <!-- Cable -->
+                <div class="product-card" data-name="charger cable fast charging type c">
+                    <div class="product-img"><i class="fas fa-bolt"></i></div>
+                    <h3>65W Fast Charger Cable</h3>
+                    <span class="call-price"><i class="fas fa-phone-alt"></i> Call Me for Price</span>
+                    <button class="btn-cart" onclick="openDetails('65W Fast Charger Cable', '<b>Features:</b><br>• Type-C Fast Charging<br>• Durable Braided Wire<br>• Safe Current Protection')">
+                        View Details / Add to 🛒
+                    </button>
+                </div>
+
+                <!-- Smartwatch -->
+                <div class="product-card" data-name="smart watch fitness tracker">
+                    <div class="product-img"><i class="fas fa-stopwatch"></i></div>
+                    <h3>AMOLED Smart Watch</h3>
+                    <span class="call-price"><i class="fas fa-phone-alt"></i> Call Me for Price</span>
+                    <button class="btn-cart" onclick="openDetails('AMOLED Smart Watch', '<b>Features:</b><br>• Heart Rate & Sleep Monitor<br>• Waterproof IP68<br>• Custom Watch Faces')">
+                        View Details / Add to 🛒
+                    </button>
+                </div>
+
+                <!-- Speaker -->
+                <div class="product-card" data-name="speaker bluetooth bass">
+                    <div class="product-img"><i class="fas fa-volume-up"></i></div>
+                    <h3>Bluetooth Speaker</h3>
+                    <span class="call-price"><i class="fas fa-phone-alt"></i> Call Me for Price</span>
+                    <button class="btn-cart" onclick="openDetails('Bluetooth Speaker', '<b>Features:</b><br>• Super Extra Bass<br>• FM Radio & SD Card Support<br>• Portable Design')">
+                        View Details / Add to 🛒
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- POPUP DETAILS MODAL -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" class="modal-title">Item Title</h2>
+            <div id="modalDesc" class="modal-desc">Details here...</div>
+            <a href="tel:+94700000000" class="modal-call-btn"><i class="fas fa-phone"></i> Call Ranithu Themitha</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ranithu Themitha Store. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/script.js">
+       
+    </script>
+</body>
+</html>
