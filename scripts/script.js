@@ -20,3 +20,19 @@
                 cards[i].style.display = name.toLowerCase().includes(input) ? "block" : "none";
             }
         }
+        <script>
+    // Open Modal Function
+    function openDetails(title, details) {
+        ...
+    }
+
+    // Close Modal Function
+    function closeModal() {
+        ...
+    }
+
+    // Search Functionality
+    function searchProducts() {
+        ...
+    }
+</script>
